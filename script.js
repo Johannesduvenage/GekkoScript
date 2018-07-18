@@ -1,12 +1,5 @@
 require('shelljs/global');
 
-let status = {
-    btcClient: [],
-    bchClient: [],
-    ethClient: [],
-    ltcClient: []
-}
-
 let btcClient = function(){
     exec("cd ../gekko && node gekko.js --config btcConfig.js", function(status, output) {
         let reset = false
@@ -63,7 +56,3 @@ btcClient();
 bchClient();
 ethClient();
 ltcClient();
-
-
-
-//eth, ltc, btc, bch
